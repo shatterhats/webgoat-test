@@ -41,24 +41,24 @@
 					<encoding>ISO-8859-1</encoding>
 				</configuration>
 			</plugin>
-			    <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.3</version>
-        <extensions>true</extensions>
-        <configuration>
-              <serverId>nexus</serverId>
-          <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
-          <!-- update this to the correct id! -->
-          <stagingProfileId>13e614824fbafdf2</stagingProfileId>
-        </configuration>
-      </plugin>
 			<plugin>
-        			<artifactId>maven-eclipse-plugin</artifactId>
-        			<configuration>
-          				<wtpversion>1.5</wtpversion>
-        			</configuration>
-      			</plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<wtpversion>1.5</wtpversion>
+				</configuration>
+			</plugin>
+			<plugin>
+        		<groupId>com.sonatype.clm</groupId>
+        		<artifactId>clm-maven-plugin</artifactId>
+				<version>2.6.0-01</version>
+        		<configuration>
+          			<serverUrl>http://localhost:8070</serverUrl>
+          			<applicationId>webgoat</applicationId>
+          			<stage>develop</stage>
+					<username>admin</username>
+					<password>admin123</password>
+        		</configuration>
+      		</plugin>
 		</plugins>
 	</build>
 
