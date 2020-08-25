@@ -16,7 +16,15 @@ steps:
   inputs:
     SonatypeCloudService: 'shridemo'
     stage: 'Build'
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+   
+- task: Maven@3
+  inputs:
+      mavenPomFile: 'webgoat/pom.xml'
+      publishJUnitResults: false
+      javaHomeOption: 'JDKVersion'
+      mavenVersionOption: 'Default'
+      mavenAuthenticateFeed: false
+      effectivePomSkip: false
+      sonarQubeRunAnalysis: false
+
   displayName: 'Run a multi-line script'
