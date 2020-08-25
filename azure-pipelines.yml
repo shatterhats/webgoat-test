@@ -12,10 +12,7 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- task: SonatypeCloudPipelineTask@0
-  inputs:
-    SonatypeCloudService: 'shridemo'
-    stage: 'Build'
+
    
 - task: Maven@3
   inputs:
@@ -28,3 +25,7 @@ steps:
       sonarQubeRunAnalysis: false
 
   displayName: 'Run a multi-line script'
+- task: SonatypeCloudPipelineTask@0
+  inputs:
+    SonatypeCloudService: 'shridemo'
+    stage: 'Build'
