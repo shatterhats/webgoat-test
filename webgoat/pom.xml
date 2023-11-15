@@ -101,12 +101,12 @@
 		<dependency>
 			<groupId>commons-collections</groupId>
 			<artifactId>commons-collections</artifactId>
-			<version>3.1</version>
+			<version>3.2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-digester</groupId>
 			<artifactId>commons-digester</artifactId>
-			<version>1.4.1</version>
+			<version>1.8</version>
 			<exclusions>
          			<exclusion>
            				<groupId>xml-apis</groupId>
@@ -179,7 +179,7 @@
  		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-catalina</artifactId>
-			<version>7.0.27</version>
+			<version>7.0.40</version>
 			<scope>provided</scope>
 		</dependency>
 
